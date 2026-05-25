@@ -81,6 +81,7 @@ All projects below are real, built, and validated hardware — client identities
 | 07 | [🤿 Underwater Diver Data Logger HAT](#07--underwater-diver-data-logger-hat) | Marine / IoT | BNO085, MS5837, TPS61088, ETA6003 | ✅ Built |
 | 08 | [🌱 BLE Soil Sensor — IoT Field Node](#08--ble-soil-sensor--iot-field-node) | Agricultural IoT | ESP32, MAX3485, TP5100, MT3608×2 | ✅ Built |
 | 09 | [⌨️ OLED Linguistic Keyboard](#09--oled-linguistic-keyboard--36-languages) | HMI / Embedded UI | SPI OLED array, Key matrix | ✅ Built |
+| 10 | [🔊 Wireless Multi-Room Audio System](#10--wireless-multi-room-audio-system) | Consumer Audio / IoT | ESP32×2, NAU88C22, TPA3118 | ✅ Built |
 
 ---
 
@@ -270,6 +271,28 @@ A fully custom keyboard where each key position carries an individual OLED displ
 
 ---
 
+## 10 · 🔊 Wireless Multi-Room Audio System
+
+> `ESP32-WROVER-IE×2` · `NAU88C22YG` · `TPA3118` · `LMR51420` · `S2M Full-Bridge` · `BLE + WiFi Mesh`
+
+**BLE proximity auto-connect. WiFi mesh sync. All speakers play together — no app pairing per node.**
+
+Multiple nodes placed across an outdoor space (lawn, garden, venue). A phone connects over BLE to whichever node is physically nearest — RSSI-based automatic handoff as the user roams. All nodes synchronise audio playback over a WiFi mesh, delivering latency-matched sound across the entire space. Each board runs two ESP32-WROVER-IE modules: one for BLE/mesh radio management, one for the audio I2S pipeline — preventing radio interference from causing audio glitches. NAU88C22YG codec handles I2S audio; TPA3118 Class-D amplifier (10µH LC output filter per channel) drives the speakers. AC 12V input via full-bridge rectifier → LMR51420 buck → 3.3V. Solder-bridge SJ1 configures master/slave node role on the same PCB hardware.
+
+| Spec | Value |
+|------|-------|
+| BLE | Auto-connect to nearest node (RSSI proximity) |
+| Sync | WiFi mesh (ESP-MESH, latency-matched) |
+| MCU | 2× ESP32-WROVER-IE-N8R2 (8MB flash, 2MB PSRAM) |
+| Codec | NAU88C22YG (I2S + I2C) |
+| Amplifier | TPA3118 Class-D (30W stereo, LC filtered) |
+| Power | AC 12V → LMR51420 buck → 3.3V |
+| PCB | 4-layer, high-density |
+
+📁 [`projects/10-wireless-multiroom-audio/`](projects/10-wireless-multiroom-audio/README.md)
+
+---
+
 ## 📋 Professional Experience
 
 | Period | Role | Location |
@@ -286,7 +309,17 @@ A fully custom keyboard where each key position carries an individual OLED displ
 - **B.E. — Electronics & Telecommunication** · Rajendra Mane College of Engineering & Technology, Ratnagiri (2020)
 - **PG Diploma — Embedded Systems & PCB Design** · National Institute for Technical Training & Skill Development (2020)
 
+---
 
+## 📊 GitHub Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9)
+
+</div>
 
 ---
 
