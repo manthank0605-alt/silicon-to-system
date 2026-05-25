@@ -1,11 +1,10 @@
 <div align="center">
 
 ```
-╔══════════════════════════════════════════════════════════════╗
-║         MANTHAN KADAM  ·  EMBEDDED HARDWARE ENGINEER        ║
-║      Circuits that think. Boards that last. Systems that     ║
-║                     connect the real world.                  ║
-╚══════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════╗
+║           MANTHAN KADAM  ·  EMBEDDED HARDWARE ENGINEER          ║
+║     Circuits that think. Boards that last. Systems that work.    ║
+╚══════════════════════════════════════════════════════════════════╝
 ```
 
 [![Email](https://img.shields.io/badge/manthankad0605@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:manthankad0605@gmail.com)
@@ -18,9 +17,9 @@
 
 ## 👨‍💻 About Me
 
-Electronics hardware engineer with **6+ years of end-to-end experience** designing embedded and electromechanical systems — from blank schematic to validated product. I work across the full hardware lifecycle: requirements, architecture, circuit design, multilayer PCB layout, bring-up, validation, and production readiness.
+Electronics hardware engineer with **6+ years of end-to-end experience** designing embedded and electromechanical systems — from blank schematic to validated, field-deployed product. I work across the full hardware lifecycle: requirements, architecture, circuit design, multilayer PCB layout, board bring-up, validation, and production readiness.
 
-My focus areas include **power electronics, audio systems, industrial automation, and wireless-connected embedded platforms**. I take pride in clean schematic practices, EMI-aware layout, and building hardware that actually works in the field.
+My focus areas include **power electronics, audio systems, industrial automation, high-voltage systems, and wireless-connected embedded platforms**. I take pride in clean schematic practices, EMI-aware layout, rigorous design documentation, and hardware that survives the real world.
 
 > *"Good hardware is invisible — it just works."*
 
@@ -38,161 +37,262 @@ My focus areas include **power electronics, audio systems, industrial automation
 ![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
 ![Radxa](https://img.shields.io/badge/Radxa%20%2F%20Rockchip-333333?style=flat-square)
+![Allwinner](https://img.shields.io/badge/Allwinner%20A133-444444?style=flat-square)
 ![Arduino](https://img.shields.io/badge/Arduino%20Opta-00979D?style=flat-square&logo=arduino&logoColor=white)
+![Nuvoton](https://img.shields.io/badge/Nuvoton%20N76E003-555555?style=flat-square)
 
 ### Communication Protocols
 ![I2C](https://img.shields.io/badge/I2C-555555?style=flat-square)
 ![SPI](https://img.shields.io/badge/SPI-555555?style=flat-square)
 ![UART](https://img.shields.io/badge/UART-555555?style=flat-square)
 ![I2S](https://img.shields.io/badge/I2S-555555?style=flat-square)
-![Modbus](https://img.shields.io/badge/Modbus%20RS485-555555?style=flat-square)
-![TCP/IP](https://img.shields.io/badge/TCP%2FIP-555555?style=flat-square)
+![RS485](https://img.shields.io/badge/RS485%20%2F%20Modbus-555555?style=flat-square)
+![DMX512](https://img.shields.io/badge/DMX512-555555?style=flat-square)
+![MIPI DSI](https://img.shields.io/badge/MIPI--DSI-555555?style=flat-square)
 ![BLE](https://img.shields.io/badge/BLE-0082FC?style=flat-square&logo=bluetooth&logoColor=white)
-![WiFi](https://img.shields.io/badge/WiFi%20Mesh-00ADEF?style=flat-square&logo=wifi&logoColor=white)
+![WiFi](https://img.shields.io/badge/WiFi%20%2F%20MQTT-00ADEF?style=flat-square&logo=wifi&logoColor=white)
+![Ethernet](https://img.shields.io/badge/Ethernet%20W5500-006699?style=flat-square)
+![USB](https://img.shields.io/badge/USB--C%20%2F%20PD-black?style=flat-square&logo=usb&logoColor=white)
 
 ### Hardware Disciplines
 - Multilayer PCB Layout (up to 4 layers, high-density)
-- Analog & Digital Circuit Design
-- Power Supply Design (Buck, Boost, Linear)
-- EMI/EMC Design & Compliance
-- Signal Integrity & Power Integrity
-- DFM / DFT / DFS
-- Board Bring-up & Root Cause Analysis
-- Sensor Integration & Peripheral Interfacing
+- Analog & Digital Circuit Design · Power Supply Design (Buck, Boost, Flyback, Linear)
+- High-Voltage Circuit Design (up to 550V DC)
+- EMI/EMC Design & Compliance · Signal Integrity · Power Integrity
+- DFM / DFT / DFS · Board Bring-up & Root Cause Analysis
+- Sensor Integration · 4–20mA Industrial Loops · Isolated I/O
+- SOM/Module Integration (A133, ESP32, Radxa)
+- Battery Management Systems · USB Power Delivery
 
 ---
 
-## 🔧 Featured Projects
+## 🔧 Project Portfolio
+
+All projects below are real, built, and validated hardware — client identities kept confidential.
+
+| # | Project | Domain | Key ICs | Status |
+|---|---------|--------|---------|--------|
+| 01 | [⚡ HV Photoflash Capacitor Charger](#01--hv-photoflash-capacitor-charger--discharger) | Power Electronics | LT3420, MT3608, PA0367A | ✅ Built |
+| 02 | [💡 Surgical LED Headlamp](#02--surgical-led-headlamp--dental--ent) | Medical Hardware | N76E003, LED2000DR | ✅ Built |
+| 03 | [⚡ 550V Capacitor Charge/Discharge Controller](#03--550v-capacitor-chargedischarge-controller) | High Voltage | IRFP460, B0505S, APAN3105 | ✅ Built |
+| 04 | [🔆 8-Ch DMX LED Dimmer + USB-C 100W PD](#04--8-channel-dmxrs485-led-dimmer--usb-c-100w-pd) | Lighting / Industrial | N76E003×2, INA226×8, TPA3118 | ✅ Built |
+| 05 | [💧 Industrial Water Purification Controller](#05--industrial-water-purification-controller) | Industrial IoT | ESP32, W5500, MCP23017×2, DS3231 | ✅ Built |
+| 06 | [📱 A133 SOM Carrier — Wellness Tablet](#06--allwinner-a133-som-carrier--wellness-tablet) | Consumer Electronics | A133, TP5100, LPA4890, MT3608×2 | ✅ Built |
+| 07 | [🤿 Underwater Diver Data Logger HAT](#07--underwater-diver-data-logger-hat) | Marine / IoT | BNO085, MS5837, TPS61088, ETA6003 | ✅ Built |
+| 08 | [🌱 BLE Soil Sensor — IoT Field Node](#08--ble-soil-sensor--iot-field-node) | Agricultural IoT | ESP32, MAX3485, TP5100, MT3608×2 | ✅ Built |
+| 09 | [⌨️ OLED Linguistic Keyboard](#09--oled-linguistic-keyboard--36-languages) | HMI / Embedded UI | SPI OLED array, Key matrix | ✅ Built |
 
 ---
 
-### 🔊 Wireless Multi-Room Audio System
-> *ESP32 Dual-Node · BLE + WiFi Mesh · NAU88C22 Codec · TPA3118 Class-D Amp*
+## 01 · ⚡ HV Photoflash Capacitor Charger & Discharger
 
-A fully custom, wireless-connected audio distribution system designed for large open spaces like lawns and outdoor venues. The system uses **BLE proximity detection** — as a user roams, the nearest speaker node automatically connects. All nodes synchronize playback over a **WiFi mesh network**, delivering coherent, latency-managed audio across the entire space.
+> `LT3420EMS` · `MT3608` · `PA0367A (1:12)` · `GSD2004S` · `SI2302` · `SS34`
 
-**Hardware highlights:**
-- Dual **ESP32-WROVER-IE** architecture (one master, one slave per node) coordinating BLE and mesh over WiFi
-- **NAU88C22YG** audio codec with full I2S interface, I2C control, microphone and line inputs
-- **TPA3118 Class-D stereo amplifier** with LC output filters, bootstrap caps, and configurable gain/mode
-- AC 12V input → full-bridge rectifier (S2M diodes) → **LMR51420 buck converter** to 3.3V for all digital logic
-- High-density **4-layer PCB** designed in EasyEDA with careful EMI partitioning between power, analog audio, and RF sections
-- Solder-bridge configuration pads for master/slave selection without hardware redesign
+**4.5V alkaline battery → 450V DC in under 30 seconds. Push-button discharge in 0.5 seconds.**
 
-**What it does:** Place nodes anywhere outdoors. A phone connects over BLE to the nearest device. Audio streams over WiFi mesh to all synchronized nodes. Zero per-node app pairing required.
+A compact high-voltage capacitor charging and discharge system. The MT3608 boost converter drives a 1:12 flyback transformer, with the LT3420 photoflash charger IC managing the charge cycle and asserting DONE when the target voltage is reached. A SI2302 N-channel MOSFET handles the controlled discharge triggered by an external push button.
 
----
+| Spec | Value |
+|------|-------|
+| Input | 4.5V (3× AA alkaline) |
+| Output | ~450V DC |
+| Charge Time | < 30 seconds |
+| Discharge Time | ~0.5 seconds |
+| Transformer | PA0367A (1:12 flyback) |
 
-### ⚡ High-Voltage Capacitor Discharge System (H-Bridge MOSFET)
-> *High-Power · H-Bridge Topology · Capacitor Charge & Discharge Control*
-
-Designed a high-voltage discharge circuit using an **H-bridge MOSFET topology** for controlled capacitor charging and rapid, precision discharge. Built to handle the thermal, switching, and gate-drive demands of high-current transient events. Includes protection circuitry for shoot-through prevention and safe energy dissipation.
-
-**Key design considerations:** Gate timing, dead-band control, snubber design, and thermal management under high di/dt conditions.
+📁 [`projects/01-photoflash-capacitor-charger/`](projects/01-photoflash-capacitor-charger/README.md)
 
 ---
 
-### 💧 Water Purification Control Box
-> *STM32 / ESP · pH Sensor · ORP Sensor · Level Switches · Stage Automation*
+## 02 · 💡 Surgical LED Headlamp — Dental & ENT
 
-An embedded control system for automated water purification. The system continuously monitors **water quality via pH and ORP sensors**, detects tank levels using digital float switches, and automatically triggers or halts purification stages based on sensor thresholds. Designed for reliability in a wet, industrial-adjacent environment.
+> `N76E003AT20` · `LED2000DR` · `22µH` · `50mΩ sense` · `GT-TZ084B`
 
-**Features:** Multi-stage process logic, sensor fault detection, relay-driven actuator control, and status indication.
+**600 lumens · Fixed 12" diameter spot at 2ft · 3-mode PWM · Dual-sided pill-shaped PCB.**
 
----
+Designed for dental and ENT surgeons. The Nuvoton N76E003 MCU generates PWM via a resistor-divider DIM network to the LED2000DR constant-current buck driver. Flicker-free output with a 50mΩ sense resistor for tight current regulation. Single push-button cycles High → Medium → Low. Pill-shaped dual-sided PCB with LED pads and thermal copper on the bottom layer.
 
-### 🤿 Underwater Video & Sensor Data Logger
-> *Raspberry Pi Zero 2W HAT · IMU · Pressure Sensor · Battery Management · USB Camera*
+| Spec | Value |
+|------|-------|
+| Output | 600 lm, 12" spot @ 2ft |
+| Modes | High / Medium / Low |
+| Driver | LED2000DR (constant current buck) |
+| MCU | N76E003AT20 (8051 core) |
+| Application | Dental / ENT surgical headband |
 
-A custom **RPi Zero 2W HAT** designed for diver-worn underwater monitoring. The board integrates an **IMU (inertial measurement unit)**, **depth/pressure sensor**, **battery voltage monitor**, and **USB camera interface** for simultaneous video capture and telemetry logging. Designed for operation in a sealed, pressure-rated housing.
-
-**Challenges solved:** Power budgeting for battery-only operation, I2C/SPI sensor stack on a compact HAT form factor, thermal management without active cooling.
-
----
-
-### ⌨️ Linguistic OLED Keyboard System
-> *SPI · OLED Displays · Embedded UI · Multi-Language Input*
-
-A custom embedded keyboard where each key features an **SPI-driven OLED screen** that dynamically updates its displayed character based on the currently selected language/input mode. Designed for applications requiring multi-script input on embedded hardware without a connected display host.
-
-**Design detail:** SPI bus management across multiple slave OLED displays, UI state machine in firmware, character map switching logic.
+📁 [`projects/02-surgical-headlamp/`](projects/02-surgical-headlamp/README.md)
 
 ---
 
-### 💡 Medical-Grade Adjustable Headlamp
-> *LED Optics · 3-Mode PWM Control · Fixed Beam Specification*
+## 03 · ⚡ 550V Capacitor Charge/Discharge Controller
 
-Designed a headlamp for medical use with a precise optical requirement: **600 lumens, 12-inch diameter spot at 60 cm** working distance. Implemented **3-mode brightness control via PWM** with carefully calculated thermal and optical design to maintain consistent color temperature and beam geometry across all modes.
+> `IRFP460BPBF` · `B0505S-2WR3` · `APAN3105` · `Optocouplers ×2` · `Arduino 5V logic`
 
-**Constraints met:** Fixed spot size regardless of mode, flicker-free output for clinical environments, compact and wearable form factor.
+**550V DC switching with full galvanic isolation from 5V Arduino logic.**
 
----
+A relay-switched charging path and low-side MOSFET discharge — all controlled safely from a 5V microcontroller via optocouplers and an isolated DC-DC converter. The B0505S generates a completely isolated 5V_Iso domain. Two independent optocoupler channels handle charge (via relay K1) and discharge (via IRFP460 with 10Ω gate resistor and 10kΩ pull-down). Safety architecture prevents spurious turn-on under all conditions.
 
-### 🌐 Modbus-to-Cloud Ethernet Gateway
-> *RS485 Modbus · Ethernet · JSON · 15-Second Telemetry Cycle*
+| Spec | Value |
+|------|-------|
+| Capacitor Voltage | ~550V DC |
+| Logic Input | 5V (Arduino / any MCU) |
+| Isolation | B0505S galvanic DC-DC + dual optocouplers |
+| Discharge Switch | IRFP460BPBF (500V N-MOSFET, TO-247) |
+| Charge Switch | APAN3105 relay |
 
-An industrial IoT bridge that **listens on Modbus RS485**, parses register data, and transmits structured **JSON payloads to the cloud over Ethernet** every 15 seconds. Designed for retrofitting legacy industrial equipment into modern monitoring infrastructure without modifying the source devices.
-
-**Protocol stack:** Modbus RTU → parsing layer → JSON serialization → HTTP/MQTT over Ethernet.
-
----
-
-### 🧊 Nugget Ice Dispenser Controller
-> *Sensor-Actuated · Electromechanical Control · Relay Logic*
-
-Embedded controller for an automated nugget ice dispenser. Detects dispense actuation via sensor input and drives the electromechanical system through a controlled sequence — motor start, dispense cycle, stop, and reset. Includes debounce logic, timeout protection, and fault indication.
+📁 [`projects/03-hv-capacitor-charger-discharge/`](projects/03-hv-capacitor-charger-discharge/README.md)
 
 ---
 
-### 📱 Yoga Enthusiast Mobile Device
-> *Allwinner A133 SoM · Custom Android/Linux Hardware Platform*
+## 04 · 🔆 8-Channel DMX/RS485 LED Dimmer + USB-C 100W PD
 
-Designed a custom handheld device built around the **Allwinner A133 System-on-Module** — a quad-core ARM Cortex-A53 platform. The device targets yoga practitioners with a specialized software experience on custom hardware, including display interface, touch input, audio, battery management, and connectivity.
+> `N76E003×2` · `IPD060N03L×8` · `INA226×8` · `ISO1640B` · `6N137S×3` · `MAX3485` · `XPM52C` · `LM2575S`
 
-**Hardware scope:** SoM integration, peripheral interfacing, power management tree, PCB layout for a mobile form factor.
+**8-channel PWM LED dimming on 24V, per-channel current monitoring, fully isolated RS485/I2C, and 100W USB-C PD — all on one board.**
+
+Two N76E003 MCUs each control 4 PWM channels driving IPD060N03L low-side MOSFETs. Every channel has a dedicated INA226 power monitor (2mΩ shunt, unique I2C address). The ISO1640B isolates I2C, three 6N137S optocouplers isolate RS485 TX/RX/EN, and the RFB-0505S provides the isolated supply. A secondary XPM52C PD controller + dual USB-C receptacles deliver 100W charging. The tall narrow PCB form factor suits DIN rail mounting.
+
+| Spec | Value |
+|------|-------|
+| LED Channels | 8 independent PWM (24V rail) |
+| Per-Channel Monitoring | INA226 (I2C, 2mΩ shunt) |
+| Protocol | RS485 / DMX512 |
+| I2C Isolation | ISO1640BQDRQ1 (automotive grade) |
+| USB-C Charging | 100W PD (XPM52C) |
+| Logic Supply | LM2575S 24V→5V |
+
+📁 [`projects/04-dmx-led-controller/`](projects/04-dmx-led-controller/README.md)
 
 ---
 
-### 🔆 ESP32 PWM LED Driver
-> *ESP32 · LEDC PWM · Multi-Channel Dimming*
+## 05 · 💧 Industrial Water Purification Controller
 
-Compact ESP32-based multi-channel LED driver using the onboard **LEDC (LED Control) PWM peripheral**. Supports independent brightness control per channel with smooth dimming curves. Designed as a lightweight, Wi-Fi-capable lighting controller.
+> `ESP32-WROOM-32E` · `W5500` · `MCP23017×2` · `DS3231MZ+` · `INA226×8` · `INA196×8` · `ADS7830×2` · `13 Relays` · `HLK-20M24`
+
+**Full industrial controller: web server, HMI, 12 DI, 4 pulse DI, 8× 4–20mA analog, 13 relay outputs, Ethernet, RTC, SD logging — one board.**
+
+The board hosts a web server and HMI directly on the ESP32. Two MCP23017 GPIO expanders provide 32 additional I/Os to drive all relay outputs and read digital inputs. Every field input is optocoupler-isolated (24V → 3.3V). Analog inputs use INA196 current-sense amplifiers for 4–20mA loop compatibility. TDS/conductivity uses CD4060 oscillators with precision full-wave rectifiers. The W5500 handles Ethernet, DS3231 provides battery-backed RTC, and a microSD logs timestamped process data. Power from AC mains via HLK-20M24 → LM2596 → SY8089 three-rail architecture.
+
+| Spec | Value |
+|------|-------|
+| MCU | ESP32-WROOM-32E (16MB flash) |
+| Connectivity | W5500 Ethernet + WiFi |
+| Digital Inputs | 12× opto-isolated + 4× pulse |
+| Analog Inputs | 8× 4–20mA (INA196 + ADS7830) |
+| Relay Outputs | 13 total (4× AC SPST + 9× dry contact) |
+| Sensors | TDS / Conductivity / PT Temperature |
+| Data Logging | MicroSD (SPI) + DS3231 RTC |
+
+📁 [`projects/05-water-purification-controller/`](projects/05-water-purification-controller/README.md)
+
+---
+
+## 06 · 📱 Allwinner A133 SOM Carrier — Wellness Tablet
+
+> `A133 SOM` · `TP5100` · `MT3608×2 (13V/22V)` · `MP2307DN` · `SM8103EADC` · `LPA4890MSF` · `SY8089A1AAC` · `CH340E` · `SL2.1S`
+
+**Custom carrier board for the Allwinner A133 quad-core ARM Cortex-A53 — a complete mobile device hardware stack from scratch.**
+
+Full carrier integrating: 4-lane MIPI-DSI display (FH35C-25S 27-pin FPC), capacitive touch (I2C, 6-pin FPC), stereo BTL speaker amp, 3.5mm TRRS headphone/mic jack (CTIA), MicroSD, USB-C + hub + CH340E UART debug, LRADC 6-button resistor ladder, PWRON/AP-RESET, Li-ion BMS with dual MT3608 boost rails (+13V backlight, +22V display), GPIO-controlled SI2301/SI2302 power sequencing, and 35+ KAU0511P1 ESD diodes across all high-speed interfaces.
+
+| Spec | Value |
+|------|-------|
+| Processor | Allwinner A133 (Quad-core A53, Mali-G31) |
+| Display | 4-lane MIPI-DSI (27-pin 0.3mm FPC) |
+| Audio | LPA4890MSF BTL amp + TRRS jack |
+| Power Rails | 3.3V / 5V / AVDD2.8V / 13V / 22V |
+| USB | Type-C + SL2.1S hub + CH340E |
+| Buttons | 6× LRADC ladder + PWRON + AP-RESET |
+
+📁 [`projects/06-a133-yoga-tablet/`](projects/06-a133-yoga-tablet/README.md)
+
+---
+
+## 07 · 🤿 Underwater Diver Data Logger HAT
+
+> `BNO085` · `MS5837` · `TPS61088 (10A)` · `ETA6003` · `MSM261S4030H0R` · `A3144` · `Radxa Zero`
+
+**Pressure, 9-DOF IMU, digital microphone, USB camera, vibration alerts — all in a sealed dive housing HAT.**
+
+A Radxa Zero HAT for underwater diver monitoring. MS5837 measures depth (rated 300m), BNO085 logs calibrated orientation and motion via integrated sensor fusion (32.768kHz crystal for timestamp accuracy), MSM261S4030H0R MEMS microphone captures I2S audio, and a USB camera records video. The TPS61088 automotive-grade 10A boost (2.2µH, 111µF output) powers the camera without drooping the battery. ETA6003 manages Li-ion charging. SI2301 P-ch MOSFET switches wireless power off underwater, on at surface for MQTT upload.
+
+| Spec | Value |
+|------|-------|
+| Host | Radxa Zero v1.51+ (40-pin HAT) |
+| Pressure | MS5837 (I2C, 0–300m) |
+| IMU | BNO085 (9-DOF, integrated fusion) |
+| Microphone | MSM261S4030H0R (I2S MEMS) |
+| Boost | TPS61088QRHLTQ1 (10A, automotive) |
+| Data Output | CSV log (pressure, IMU, timestamp) |
+
+📁 [`projects/07-diver-data-logger-hat/`](projects/07-diver-data-logger-hat/README.md)
+
+---
+
+## 08 · 🌱 BLE Soil Sensor — IoT Field Node
+
+> `ESP-32S` · `MAX3485ESA+` · `TM74HC04` · `SM712` · `TP5100` · `MT3608×2` · `LM317G` · `AO3400`
+
+**RS485 soil sensor polling over BLE/WiFi → MQTT, with auto-direction RS485, dual 12V boost, and field-hardened ESD protection.**
+
+An agricultural IoT field node that reads RS485 soil sensors (Modbus/proprietary) and publishes telemetry to a cloud MQTT broker. The TM74HC04 hex inverter implements automatic RS485 direction switching — no dedicated GPIO needed. SM712 TVS diodes protect A/B lines to ±15kV ESD, polyfuses add overcurrent protection. MT3608 boosts USB 5V and battery to 12V for field sensor power. TP5100 manages Li-ion charging from the USB boost rail. LM317G provides stable 3.3V for ESP32 logic.
+
+| Spec | Value |
+|------|-------|
+| MCU | ESP-32S (BLE 4.2 + WiFi) |
+| Protocol | MQTT over WiFi |
+| Sensor Bus | RS485 (MAX3485, auto-direction) |
+| ESD Protection | SM712 ±15kV on RS485 A/B |
+| Boost | 2× MT3608 (USB→12V, BAT→12V) |
+| Charger | TP5100 (12V input, Li-Ion) |
+
+📁 [`projects/08-ble-soil-sensor/`](projects/08-ble-soil-sensor/README.md)
+
+---
+
+## 09 · ⌨️ OLED Linguistic Keyboard — 36 Languages
+
+> `SPI OLED array` · `Key matrix` · `Per-key display` · `Dynamic glyph rendering`
+
+**Every key has its own OLED screen. Select a language — all 100+ keys relabel themselves instantly.**
+
+A fully custom keyboard where each key position carries an individual OLED display driven over SPI daisy-chain. When the user switches between any of 36 supported languages — covering Latin, Devanagari, Arabic, Cyrillic, CJK, Hangul, Hebrew, Thai, and more — the firmware pushes new glyph bitmaps to every OLED and remaps the HID keycode table simultaneously. The PCB routes the SPI bus horizontally across all key rows with per-key or per-row chip-select lines. Right-to-left and complex-script languages (Arabic ligatures, Devanagari conjuncts) are pre-rendered as bitmaps in firmware before transmission.
+
+| Spec | Value |
+|------|-------|
+| Keys | ~100 (one OLED per key) |
+| Languages | 36 (Latin, Devanagari, Arabic, Cyrillic, CJK, etc.) |
+| Display Interface | SPI daisy-chain |
+| Switch Matrix | Row × column with diode ghosting prevention |
+| Design Tool | KiCad |
+
+📁 [`projects/09-oled-linguistic-keyboard/`](projects/09-oled-linguistic-keyboard/README.md)
 
 ---
 
 ## 📋 Professional Experience
 
-| Period | Role | Company |
-|--------|------|---------|
-| Feb 2025 – Present | Embedded Hardware Engineer | Ultimate Design LLP, Navi Mumbai |
-| May 2024 – Feb 2025 | Embedded Engineer | Augmatic Technologies Pvt. Ltd., Vadodara |
-| Oct 2023 – Apr 2024 | Jr. Electronics Engineer | SinAxis Enterprises Pvt. Ltd., Mumbai |
-| Aug 2021 – Sep 2023 | Electronic Technician II | Jabil Circuits India Pvt. Ltd., Pune |
+| Period | Role | Location |
+|--------|------|----------|
+| Feb 2025 – Present | Embedded Hardware Engineer | Navi Mumbai |
+| May 2024 – Feb 2025 | Embedded Engineer | Vadodara |
+| Oct 2023 – Apr 2024 | Jr. Electronics Engineer | Mumbai |
+| Aug 2021 – Sep 2023 | Electronic Technician II | Pune |
 
 ---
 
-## 🎓 Education & Certifications
+## 🎓 Education
 
 - **B.E. — Electronics & Telecommunication** · Rajendra Mane College of Engineering & Technology, Ratnagiri (2020)
 - **PG Diploma — Embedded Systems & PCB Design** · National Institute for Technical Training & Skill Development (2020)
 
----
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff)
-
-</div>
 
 ---
 
 <div align="center">
 
-*Open to freelance PCB design, hardware consulting, and embedded systems projects.*
+*Available for freelance PCB design, hardware consulting, and embedded systems projects.*
 
 **📧 manthankad0605@gmail.com · 📞 +91 8087652098 · Mumbai, India**
 
