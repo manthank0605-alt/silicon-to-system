@@ -82,6 +82,7 @@ All projects below are real, built, and validated hardware — client identities
 | 08 | [🌱 BLE Soil Sensor — IoT Field Node](#08--ble-soil-sensor--iot-field-node) | Agricultural IoT | ESP32, MAX3485, TP5100, MT3608×2 | ✅ Built |
 | 09 | [⌨️ OLED Linguistic Keyboard](#09--oled-linguistic-keyboard--36-languages) | HMI / Embedded UI | SPI OLED array, Key matrix | ✅ Built |
 | 10 | [🔊 Wireless Multi-Room Audio System](#10--wireless-multi-room-audio-system) | Consumer Audio / IoT | ESP32×2, NAU88C22, TPA3118 | ✅ Built |
+| 11 | [📡 LoRa IoT Smart Switch](#11--lora-iot-smart-switch) | Industrial IoT | ESP32, E22-900M LoRa, HLK-5M05, TP5100 | ✅ Built |
 
 ---
 
@@ -292,15 +293,29 @@ Multiple nodes placed across an outdoor space (lawn, garden, venue). A phone con
 📁 [`projects/10-wireless-multiroom-audio/`](projects/10-wireless-multiroom-audio/README.md)
 
 ---
-11 · 📡 LoRa IoT Smart Switch
 
-ESP-32S · E22-900M22S (LoRa SX1262) · HLK-5M05 · SRD-05VDC Relay · PC817 Opto · TP5100 · DW01A + FS8205 · MT3608 · AMS1117-3.3
+## 11 · 📡 LoRa IoT Smart Switch
 
-WiFi + LoRa 900MHz dual-radio AC switch — controls mains loads remotely with battery backup and full sensor expansion.
-Controls AC mains loads (110–250V) via a relay, commanded over WiFi (MQTT) or LoRa 900MHz long-range radio (E22-900M22S, SX1262) for areas beyond WiFi coverage. HLK-5M05 isolated module powers the board from AC mains; a Li-ion battery with TP5100 charger, DW01A protection IC, FS8205 dual MOSFET, and MT3608 boost provides seamless backup power when AC is absent. MBR120LSF Schottky ORing diodes handle the AC/battery/USB-C handoff automatically. Relay is isolated via PC817 optocoupler + FMMT620 NPN. MOV varistor and 1A fuse protect the AC input. Six expansion headers (I2C ×2, SPI, Analog ×2, OLED) allow any sensor to be added without hardware changes. Battery percentage reported live over MQTT via a 30k/100k ADC divider.
-SpecValueMCUESP-32S (WiFi + BLE)Long-Range RadioE22-900M22S (LoRa SX1262, 900MHz)AC Input110–250V AC, 50–60Hz (HLK-5M05 isolated)RelaySRD-05VDC SPDT — NO/COM/NCRelay IsolationPC817 optocoupler + FMMT620 NPNBattery BackupTP5100 + DW01A + FS8205 + MT3608 boostSensor HeadersI2C ×2, SPI ×1, Analog ×2, OLED ×1
-📁 projects/11-lora-smart-switch/
+> `ESP-32S` · `E22-900M22S (LoRa SX1262)` · `HLK-5M05` · `SRD-05VDC Relay` · `PC817 Opto` · `TP5100` · `DW01A + FS8205` · `MT3608` · `AMS1117-3.3`
+
+**WiFi + LoRa 900MHz dual-radio AC switch — controls mains loads remotely with battery backup and full sensor expansion.**
+
+Controls AC mains loads (110–250V) via a relay, commanded over WiFi (MQTT) or **LoRa 900MHz long-range radio** (E22-900M22S, SX1262) for areas beyond WiFi coverage. HLK-5M05 isolated module powers the board from AC mains; a Li-ion battery with TP5100 charger, DW01A protection IC, FS8205 dual MOSFET, and MT3608 boost provides seamless backup power when AC is absent. MBR120LSF Schottky ORing diodes handle the AC/battery/USB-C handoff automatically. Relay is isolated via PC817 optocoupler + FMMT620 NPN. MOV varistor and 1A fuse protect the AC input. Six expansion headers (I2C ×2, SPI, Analog ×2, OLED) allow any sensor to be added without hardware changes. Battery percentage reported live over MQTT via a 30k/100k ADC divider.
+
+| Spec | Value |
+|------|-------|
+| MCU | ESP-32S (WiFi + BLE) |
+| Long-Range Radio | E22-900M22S (LoRa SX1262, 900MHz) |
+| AC Input | 110–250V AC, 50–60Hz (HLK-5M05 isolated) |
+| Relay | SRD-05VDC SPDT — NO/COM/NC |
+| Relay Isolation | PC817 optocoupler + FMMT620 NPN |
+| Battery Backup | TP5100 + DW01A + FS8205 + MT3608 boost |
+| Sensor Headers | I2C ×2, SPI ×1, Analog ×2, OLED ×1 |
+
+📁 [`projects/11-lora-smart-switch/`](projects/11-lora-smart-switch/README.md)
+
 ---
+
 ## 📋 Professional Experience
 
 | Period | Role | Location |
